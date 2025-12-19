@@ -281,7 +281,7 @@ Before restarting:
 
 `#PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)`
 
-6. After patching:
+5. After patching:
    - Add `#` to the first entry
    - Remove `#` from the second entry
 
@@ -291,8 +291,8 @@ Final state:
 
 `PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)`
 
-5. Save `config.plist`
-6. Unmount EFI
+6. Save `config.plist`
+7. Unmount EFI
 
 ---
 
