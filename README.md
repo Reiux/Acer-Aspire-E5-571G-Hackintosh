@@ -5,6 +5,7 @@ OpenCore-based Hackintosh configuration for **Acer Aspire E5-571G** running
 
 > ⚠️ This EFI is provided for reference and educational purposes only.  
 > Do NOT use it as-is. Generate your own SMBIOS values before booting.
+> You can use GenSMBIOS to generate your own SMBIOS values.
 
 ---
 
@@ -226,14 +227,14 @@ EFI\
 
 ## EFI Notes
 
-EFI initially created using [OC-Simplify](https://github.com/lzhoang2801/OpCore-Simplify), then manually adjusted and tested. Additional kexts (**IO80211ElCap.kext** and **corecaptureElCap.kext**) were added to help enable Atheros AR9565 Wi-Fi, together with OCLP post-install patching.
+EFI initially created using [OC-Simplify](https://github.com/lzhoang2801/OpCore-Simplify), then manually adjusted and tested. Additional kexts (** Moddified IO80211ElCap.kext to work on AR9565 Wi-Fi card** and **corecaptureElCap.kext**) were added to help enable Atheros AR9565 Wi-Fi, together with OCLP post-install patching.
 
 ---
 
 ## Post-Install Patching (OCLP Required)
 
 On macOS Sequoia, both **Intel HD Graphics 5500** and  
-**Qualcomm Atheros AR9565 Wi-Fi** require **OpenCore Legacy Patcher (OCLP)**.
+**Qualcomm Atheros AR9565 Wi-Fi** require **[OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher)**.
 
 ---
 
@@ -242,9 +243,9 @@ On macOS Sequoia, both **Intel HD Graphics 5500** and
 ### Requirements
 
 - Android phone (USB tethering)
-- HoRNDIS.kext (included)
-- OpenCore Legacy Patcher
-- OCAuxiliaryTools
+- HoRNDIS.kext (already included in the EFI)
+- [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher)  
+- [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools)
 
 ---
 
@@ -253,14 +254,14 @@ On macOS Sequoia, both **Intel HD Graphics 5500** and
 1. Connect Android phone via USB  
 2. Enable **USB Tethering**  
 3. macOS will use HoRNDIS for internet  
-4. Download OpenCore Legacy Patcher  
+4. Download OpenCore Legacy Patcher and OCAuxiliaryTools using Safari
 
 ---
 
 ### Apply OCLP Patch
 
 1. Open **OpenCore Legacy Patcher**
-2. Select **Post Install Root Patch**
+2. Select **Post-Install Root Patch**
 3. Apply recommended patches:
    - Graphics Broadwell
    - Legacy Wireless
@@ -273,14 +274,14 @@ On macOS Sequoia, both **Intel HD Graphics 5500** and
 Before restarting:
 
 1. Open **OCAuxiliaryTools**
-2. Mount EFI "⌘ + M" and open `config.plist`
+2. Mount EFI "⌘/Windows Logo + M" and open `config.plist`
 3. Navigate to:
 'DeviceProperties → Add'
 4. You will see two entries:
 
-`PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)`
+Entry #1 `PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)`
 
-`#PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)`
+Entry #2 `#PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)`
 
 5. After patching:
    - Add `#` to the first entry
@@ -288,9 +289,9 @@ Before restarting:
 
 Final state:
 
-`#PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)`
+Entry #1 `#PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)`
 
-`PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)`
+Entry #2 `PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)`
 
 6. Save `config.plist`
 7. Unmount EFI
