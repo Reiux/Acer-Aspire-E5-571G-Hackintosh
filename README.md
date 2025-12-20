@@ -52,7 +52,7 @@ OpenCore-based Hackintosh configuration for **Acer Aspire E5-571G** running
 ## Partially Working
 
 - **Trackpad**  
-  Gestures and Buttons work, but drag and drop gestures do not
+  Gestures (except drag and drop) and Buttons work
 
 ---
 
@@ -81,7 +81,7 @@ OpenCore-based Hackintosh configuration for **Acer Aspire E5-571G** running
 | Ethernet | Yes |
 | Audio | Yes |
 | Keyboard | Yes |
-| Trackpad | Partially (Buttons not working) |
+| Trackpad | Partially (Drag and drop gestures not working) |
 | Web Camera | Yes |
 | USB | Yes |
 | Sleep / Hibernation | No (Reboots / Crashes) |
@@ -233,7 +233,7 @@ EFI initially created using [OC-Simplify](https://github.com/lzhoang2801/OpCore-
 ## Post-Install Patching (OCLP Required)
 
 On macOS Sequoia, both **Intel HD Graphics 5500** and  
-**Atheros AR9565 Wi-Fi** require **OpenCore Legacy Patcher (OCLP)**.
+**Qualcomm Atheros AR9565 Wi-Fi** require **OpenCore Legacy Patcher (OCLP)**.
 
 ---
 
@@ -260,10 +260,11 @@ On macOS Sequoia, both **Intel HD Graphics 5500** and
 ### Apply OCLP Patch
 
 1. Open **OpenCore Legacy Patcher**
-2. Apply recommended patches:
-   - Intel HD Graphics 5500
-   - Legacy Wi-Fi
-3. When prompted to restart, **DO NOT reboot yet**
+2. Select **Post Install Root Patch**
+3. Apply recommended patches:
+   - Graphics Broadwell
+   - Legacy Wireless
+4. When prompted to restart, **DO NOT reboot yet**
 
 ---
 
@@ -272,7 +273,7 @@ On macOS Sequoia, both **Intel HD Graphics 5500** and
 Before restarting:
 
 1. Open **OCAuxiliaryTools**
-2. Mount EFI and open `config.plist`
+2. Mount EFI "⌘ + M" and open `config.plist`
 3. Navigate to:
 'DeviceProperties → Add'
 4. You will see two entries:
