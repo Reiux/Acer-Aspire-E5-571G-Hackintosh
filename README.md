@@ -43,7 +43,7 @@ OpenCore-based Hackintosh configuration for **Acer Aspire E5-571G** running
 - Battery Status  
 - Keyboard  
 - Web Camera  
-- Brightness Control  
+- Brightness Control
 - **Intel HD Graphics 5500 (Patched via OCLP)**  
 - **Wi-Fi (Atheros AR9565, Patched via OCLP)**  
 
@@ -52,7 +52,7 @@ OpenCore-based Hackintosh configuration for **Acer Aspire E5-571G** running
 ## Partially Working
 
 - **Trackpad**  
-  Gestures work, but trackpad buttons do not
+  Gestures and Buttons work, but drag and drop gestures do not
 
 ---
 
