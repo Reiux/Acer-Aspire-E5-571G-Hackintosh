@@ -29,7 +29,7 @@ OpenCore-based Hackintosh configuration for **Acer Aspire E5-571G** running
 ## Software Information
 
 - macOS: **15.7.3 Sequoia**
-- Bootloader: **OpenCore v0.8.8**
+- Bootloader: **OpenCore v1.0.6 Latest**
 - SMBIOS: **MacBookPro15,2**
 
 ---
@@ -102,7 +102,7 @@ Wi-Fi icon may show **1 bar** even when close to the router.
 This does **not** affect real-world performance.
 
 ---
-## 📂 EFI Structure
+## EFI Structure
 
 ```text
 EFI\
@@ -227,7 +227,7 @@ EFI\
 
 ## EFI Notes
 
-EFI initially created using [OC-Simplify](https://github.com/lzhoang2801/OpCore-Simplify), then manually adjusted and tested. Additional kexts (**Moddified IO80211ElCap.kext to work on AR9565 Wi-Fi card** and **corecaptureElCap.kext**) were added to help enable Atheros AR9565 Wi-Fi, together with OCLP post-install patching.
+EFI initially created using [OC-Simplify](https://github.com/lzhoang2801/OpCore-Simplify), then manually adjusted and tested. Additional kexts (**Modified IO80211ElCap.kext to work on AR9565 Wi-Fi card** and **corecaptureElCap.kext**) were added to help enable Atheros AR9565 Wi-Fi, together with OCLP post-install patching.
 
 ---
 
