@@ -28,7 +28,7 @@ OpenCore-based Hackintosh configuration for **Acer Aspire E5-571G** running
 ## Software Information
 
 - macOS: **15.7.3 Sequoia**
-- Bootloader: **OpenCore**
+- Bootloader: **OpenCore v0.8.8**
 - SMBIOS: **MacBookPro15,2**
 
 ---
