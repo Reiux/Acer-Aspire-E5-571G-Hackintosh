@@ -355,6 +355,8 @@
                 <false/>
                 <key>AvoidRuntimeDefrag</key>
                 <true/>
+                <key>ClearTaskSwitchBit</key>
+                <false/>
                 <key>DevirtualiseMmio</key>
                 <false/>
                 <key>DisableSingleUser</key>
@@ -367,6 +369,8 @@
                 <true/>
                 <key>EnableWriteUnprotector</key>
                 <true/>
+                <key>FixupAppleEfiImages</key>
+                <false/>
                 <key>ForceBooterSignature</key>
                 <false/>
                 <key>ForceExitBootServices</key>
@@ -402,23 +406,6 @@
                     <key>AAPL,slot-name</key>
                     <string>Internal@0,28,3/0,0</string>
                     <key>IOName</key>
-                    <string>pci168c,36</string>
-                    <key>compatible</key>
-                    <string>pci168c,36</string>
-                    <key>device-id</key>
-                    <data>NgAAAA==</data>
-                    <key>device_type</key>
-                    <string>Network controller</string>
-                    <key>model</key>
-                    <string>QCA9565 / AR9565 Wireless Network Adapter</string>
-                    <key>name</key>
-                    <string>pci168c,36</string>
-                </dict>
-                <key>PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)</key>
-                <dict>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,28,3/0,0</string>
-                    <key>IOName</key>
                     <string>pci168c,30</string>
                     <key>compatible</key>
                     <string>pci168c,30</string>
@@ -430,6 +417,23 @@
                     <string>QCA9380 / AR9380 Wireless Network Adapter</string>
                     <key>name</key>
                     <string>pci168c,30</string>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)</key>
+                <dict>
+                    <key>AAPL,slot-name</key>
+                    <string>Internal@0,28,3/0,0</string>
+                    <key>IOName</key>
+                    <string>pci168c,36</string>
+                    <key>compatible</key>
+                    <string>pci168c,36</string>
+                    <key>device-id</key>
+                    <data>NgAAAA==</data>
+                    <key>device_type</key>
+                    <string>Network controller</string>
+                    <key>model</key>
+                    <string>QCA9565 / AR9565 Wireless Network Adapter</string>
+                    <key>name</key>
+                    <string>pci168c,36</string>
                 </dict>
                 <key>PciRoot(0x0)/Pci(0x1b,0x0)</key>
                 <dict>
@@ -468,7 +472,7 @@
                     <key>BundlePath</key>
                     <string>Lilu.kext</string>
                     <key>Comment</key>
-                    <string>V1.7.2</string>
+                    <string>V1.7.1</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -486,7 +490,7 @@
                     <key>BundlePath</key>
                     <string>VirtualSMC.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.8</string>
+                    <string>V1.3.7</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -522,7 +526,7 @@
                     <key>BundlePath</key>
                     <string>AppleALC.kext</string>
                     <key>Comment</key>
-                    <string>V1.9.7</string>
+                    <string>V1.9.6</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -954,7 +958,7 @@
                     <key>BundlePath</key>
                     <string>WhateverGreen.kext</string>
                     <key>Comment</key>
-                    <string>V1.7.1</string>
+                    <string>V1.7.0</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -1110,6 +1114,8 @@
                 <true/>
                 <key>DisableIoMapper</key>
                 <true/>
+                <key>DisableIoMapperMapping</key>
+                <false/>
                 <key>DisableLinkeditJettison</key>
                 <true/>
                 <key>DisableRtcChecksum</key>
@@ -1167,6 +1173,8 @@
                 <false/>
                 <key>HideAuxiliary</key>
                 <false/>
+                <key>InstanceIdentifier</key>
+                <string></string>
                 <key>LauncherOption</key>
                 <string>Disabled</string>
                 <key>LauncherPath</key>
@@ -1385,13 +1393,13 @@
                 <key>AdviseFeatures</key>
                 <false/>
                 <key>MLB</key>
-                <string>CHANGE-ME</string>
+                <string>C02844200GUJH4RJC</string>
                 <key>MaxBIOSVersion</key>
                 <false/>
                 <key>ProcessorType</key>
                 <integer>0</integer>
                 <key>ROM</key>
-                <data>yg==</data>
+                <data>8HYcf/Da</data>
                 <key>SpoofVendor</key>
                 <true/>
                 <key>SystemMemoryStatus</key>
@@ -1399,9 +1407,9 @@
                 <key>SystemProductName</key>
                 <string>MacBookPro15,2</string>
                 <key>SystemSerialNumber</key>
-                <string>CHANGE-ME</string>
+                <string>C02XM5YKJHCC</string>
                 <key>SystemUUID</key>
-                <string>CHANGE-ME</string>
+                <string>D0BF358C-2D16-4E90-8B20-DD02A3289C69</string>
             </dict>
             <key>UpdateDataHub</key>
             <true/>
@@ -1585,16 +1593,22 @@
             <dict>
                 <key>ClearScreenOnModeSwitch</key>
                 <false/>
+                <key>ConsoleFont</key>
+                <string></string>
                 <key>ConsoleMode</key>
                 <string></string>
                 <key>DirectGopRendering</key>
                 <false/>
                 <key>ForceResolution</key>
                 <false/>
+                <key>GopBurstMode</key>
+                <false/>
                 <key>GopPassThrough</key>
                 <string>Disabled</string>
                 <key>IgnoreTextInGraphics</key>
                 <false/>
+                <key>InitialMode</key>
+                <string>Auto</string>
                 <key>ProvideConsoleGop</key>
                 <true/>
                 <key>ReconnectGraphicsOnConnect</key>
@@ -1650,6 +1664,8 @@
                 <false/>
                 <key>OSInfo</key>
                 <false/>
+                <key>PciIo</key>
+                <false/>
                 <key>UnicodeCollation</key>
                 <false/>
             </dict>
@@ -1679,12 +1695,18 @@
                 <true/>
                 <key>ResizeGpuBars</key>
                 <integer>-1</integer>
+                <key>ResizeUsePciRbIo</key>
+                <false/>
+                <key>ShimRetainProtocol</key>
+                <false/>
                 <key>TscSyncTimeout</key>
                 <integer>0</integer>
                 <key>UnblockFsConnect</key>
                 <false/>
             </dict>
             <key>ReservedMemory</key>
+            <array/>
+            <key>Unload</key>
             <array/>
         </dict>
     </dict>
