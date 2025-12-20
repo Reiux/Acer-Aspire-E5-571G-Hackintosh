@@ -227,7 +227,7 @@ EFI\
 
 ## EFI Notes
 
-EFI initially created using [OC-Simplify](https://github.com/lzhoang2801/OpCore-Simplify), then manually adjusted and tested. Additional kexts (** Moddified IO80211ElCap.kext to work on AR9565 Wi-Fi card** and **corecaptureElCap.kext**) were added to help enable Atheros AR9565 Wi-Fi, together with OCLP post-install patching.
+EFI initially created using [OC-Simplify](https://github.com/lzhoang2801/OpCore-Simplify), then manually adjusted and tested. Additional kexts (**Moddified IO80211ElCap.kext to work on AR9565 Wi-Fi card** and **corecaptureElCap.kext**) were added to help enable Atheros AR9565 Wi-Fi, together with OCLP post-install patching.
 
 ---
 
