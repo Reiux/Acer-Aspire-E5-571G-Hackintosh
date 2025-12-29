@@ -45,8 +45,7 @@ OpenCore-based Hackintosh configuration for **Acer Aspire E5-571G** running
 - Keyboard  
 - Web Camera  
 - Brightness Control
-- **Intel HD Graphics 5500 (Patched via OCLP)**  
-- **Wi-Fi (Atheros AR9565, Patched via OCLP)**  
+- **Intel HD Graphics 5500 (Patched via OCLP)**   
 
 ---
 
@@ -54,7 +53,9 @@ OpenCore-based Hackintosh configuration for **Acer Aspire E5-571G** running
 
 - **Trackpad**  
   Gestures (except drag and drop) and Buttons work
-
+- **Wi-Fi (Atheros AR9565, Patched via OCLP)**
+  Works with TP-Link routers at full speed, but HUAWEI Routers is just straight up
+  slow on this Wi-Fi chip. 
 ---
 
 ## What Does Not Work
@@ -78,7 +79,7 @@ OpenCore-based Hackintosh configuration for **Acer Aspire E5-571G** running
 | CPU Power Management | Yes |
 | Intel HD Graphics 5500 | Yes (OCLP Patched) |
 | NVIDIA GT 820M | No (Disabled) |
-| Wi-Fi | Yes (Signal icon cosmetic bug) |
+| Wi-Fi | Partially (Signal icon cosmetic bug) |
 | Ethernet | Yes |
 | Audio | Yes |
 | Keyboard | Yes |
@@ -92,10 +93,9 @@ OpenCore-based Hackintosh configuration for **Acer Aspire E5-571G** running
 
 ## Wi-Fi Notes (Qualcomm Atheros AR9565)
 
-After OCLP patching, Wi-Fi is **fully usable**.
+After OCLP patching, Wi-Fi is **fully usable** (on certain routers).
 
-- Tested up to **50 Mbps on a 50 Mbps network**
-- Stable for daily use
+- Tested on TP-Link routers up to **50 Mbps on a 50 Mbps network.** Not sure about other routers.
 
 Known cosmetic issue:  
 Wi-Fi icon may show **1 bar** even when close to the router.  
